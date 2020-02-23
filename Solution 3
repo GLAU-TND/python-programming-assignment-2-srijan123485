@@ -1,0 +1,12 @@
+g=eval(input())
+g=[str(i) for i in v]
+g.sort()
+b=''
+for i in range(len(g)-1):
+    if g[i][0]==g[i+1][0] and len(g[i])<len(g[i+1]):
+        a=g[i]
+        g[i]=g[i+1]
+        g[i+1]=a
+for i in range(len(g)-1,-1,-1):
+    b=b+g[i]
+print(int(b))
